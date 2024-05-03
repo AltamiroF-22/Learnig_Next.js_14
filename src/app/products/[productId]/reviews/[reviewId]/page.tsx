@@ -2,12 +2,15 @@ export default function ProductReviews({
   params,
 }: {
   params: {
+    productId: string;
     reviewId: string;
   };
 }) {
   return (
     <>
-      <h1>Product Reviews {params.reviewId}</h1>
+      <h1>
+        Product {params.productId} Reviews {params.reviewId}
+      </h1>
 
       <article>
         <h5>Lorem ipsum dolor</h5>
