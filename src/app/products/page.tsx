@@ -1,33 +1,30 @@
 import Link from "next/link";
+import { ProductsLinksProps } from "@/interfaces/nav-links";
 
-interface LinkProps {
-  _id: string;
-  text: string;
-}
+const data: ProductsLinksProps[] = [
+  {
+    _id: "1",
+    text: "Product 1",
+  },
+  {
+    _id: "2",
+    text: "Product 2",
+  },
+  {
+    _id: "3",
+    text: "Product 3",
+  },
+  {
+    _id: "4",
+    text: "Product 4",
+  },
+  {
+    _id: "5",
+    text: "Product 5",
+  },
+];
 
 export default function Products() {
-  const data: LinkProps[] = [
-    {
-      _id: "1",
-      text: "Product 1",
-    },
-    {
-      _id: "2",
-      text: "Product 2",
-    },
-    {
-      _id: "3",
-      text: "Product 3",
-    },
-    {
-      _id: "4",
-      text: "Product 4",
-    },
-    {
-      _id: "5",
-      text: "Product 5",
-    },
-  ];
   return (
     <>
       <Link href="/" className="underline p-1 text-blue-700">
