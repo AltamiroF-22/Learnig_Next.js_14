@@ -1,3 +1,5 @@
+"use client"
+
 import { ProductsProps } from "@/interfaces/products";
 import { notFound } from "next/navigation";
 
