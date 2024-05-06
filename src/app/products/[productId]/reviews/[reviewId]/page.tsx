@@ -1,18 +1,14 @@
-"use client"
-
+"use client";
 import { ProductsProps } from "@/interfaces/products";
+import { getRandomInt } from "@/utils/generate-error";
 import { notFound } from "next/navigation";
-
-function getRandomInt(count: number) {
-  return Math.floor(Math.random() * count);
-}
 
 export default function ProductReviews(params: ProductsProps) {
   const random = getRandomInt(2);
 
-  if (random === 1) {
-    throw new Error("Error loading review");
-  }
+  // if (random === 1) {
+  //   throw new Error("Error loading review");
+  // }
 
   if (Number(params.reviewId) > 1000) {
     notFound();
