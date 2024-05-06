@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ProductsLinksProps } from "@/interfaces/nav-links";
+import Card from "@/components/card";
 
 const data: ProductsLinksProps[] = [
   {
@@ -33,9 +34,11 @@ export default function Products() {
       <h1 className="text-3xl text-rose-600">Products List</h1>
 
       {data.map((item) => (
-        <h2 key={item._id}>
-          <Link href={`products/${item._id}`}>{item.text}</Link>
-        </h2>
+        <Card key={item._id}>
+          <h2>
+            <Link href={`products/${item._id}`}>{item.text}</Link>
+          </h2>
+        </Card>
       ))}
       <h2>
         <Link href={`products/6`} replace>
